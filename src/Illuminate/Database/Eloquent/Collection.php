@@ -566,7 +566,9 @@ class Collection extends BaseCollection implements QueueableCollection
      */
     public function makeHidden($attributes)
     {
-        return $this->each->makeHidden($attributes);
+        $this->first()->makeHidden($attributes);
+
+        return $this;
     }
 
     /**
@@ -577,7 +579,9 @@ class Collection extends BaseCollection implements QueueableCollection
      */
     public function mergeHidden($attributes)
     {
-        return $this->each->mergeHidden($attributes);
+        $this->first()->mergeHidden($attributes);
+
+        return $this;
     }
 
     /**
@@ -588,7 +592,9 @@ class Collection extends BaseCollection implements QueueableCollection
      */
     public function setHidden($hidden)
     {
-        return $this->each->setHidden($hidden);
+        $this->first()->setHidden($hidden);
+
+        return $this;
     }
 
     /**
@@ -599,7 +605,9 @@ class Collection extends BaseCollection implements QueueableCollection
      */
     public function makeVisible($attributes)
     {
-        return $this->each->makeVisible($attributes);
+        $this->first()->makeVisible($attributes);
+
+        return $this;
     }
 
     /**
@@ -610,7 +618,9 @@ class Collection extends BaseCollection implements QueueableCollection
      */
     public function mergeVisible($attributes)
     {
-        return $this->each->mergeVisible($attributes);
+        $this->first()->mergeVisible($attributes);
+
+        return $this;
     }
 
     /**
@@ -621,7 +631,9 @@ class Collection extends BaseCollection implements QueueableCollection
      */
     public function setVisible($visible)
     {
-        return $this->each->setVisible($visible);
+        $this->first()->setVisible($visible);
+
+        return $this;
     }
 
     /**
@@ -632,7 +644,9 @@ class Collection extends BaseCollection implements QueueableCollection
      */
     public function append($attributes)
     {
-        return $this->each->append($attributes);
+        $this->first()->append($attributes);
+
+        return $this;
     }
 
     /**
@@ -643,7 +657,9 @@ class Collection extends BaseCollection implements QueueableCollection
      */
     public function setAppends(array $appends)
     {
-        return $this->each->setAppends($appends);
+        $this->first()->setAppends($appends);
+
+        return $this;
     }
 
     /**
